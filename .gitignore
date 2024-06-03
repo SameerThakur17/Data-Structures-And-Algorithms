@@ -1,0 +1,9 @@
+
+# Executables
+*.exe
+*.out
+
+# IDE specific files
+.vscode/
+
+
