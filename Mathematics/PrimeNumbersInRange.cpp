@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 bool isPrime(int n)
@@ -31,6 +31,10 @@ bool isPrime(int n)
 
 void primeNumbersInRange(int n)
 {
+    /*
+    Time Complexity O(n*root(n))
+    Space Complexity O(1)
+    */
     for (int i = 2; i <= n; i++)
     {
         if (isPrime(i))
@@ -39,9 +43,83 @@ void primeNumbersInRange(int n)
         }
     }
 }
+void seiveOfEratosthnes(int n)
+{
+    /*
+    Time Complexity O(nloglogn)
+    Space Complexity O(n)
+    */
+    vector<bool> isPrime(n + 1, true);
 
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (isPrime[i])
+        {
+            for (int j = 2 * i; j <= n; j += i)
+            {
+                isPrime[j] = false;
+            }
+        }
+    }
+    for (int i = 2; i <= n; i++)
+    {
+        if (isPrime[i])
+        {
+            cout << i << " ";
+        }
+    }
+}
+
+void seiveOfEratosthenesOptimized(int n)
+{
+    /*
+    Time Complexity O(nloglogn)
+    Space Complexity O(n)
+    */
+    vector<bool> isPrime(n + 1, true);
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (isPrime[i])
+        {
+            for (int j = i * i; j <= n; j = j + i)
+            {
+                isPrime[j] = false;
+            }
+        }
+    }
+    for (int i = 2; i <= n; i++)
+    {
+        if (isPrime[i])
+        {
+            cout << i << " ";
+        }
+    }
+}
+
+void seiveOfEratosthenesOptimized2(int n)
+{
+    /*
+    Time Complexity O(nloglogn)
+    Space Complexity O(n)
+    */
+    vector<bool> isPrime(n + 1, true);
+    for (int i = 2; i <= n; i++)
+    {
+        if (isPrime[i])
+        {
+            cout << i << ' ';
+            for (int j = i * i; j <= n; j = j + i)
+            {
+                isPrime[j] = false;
+            }
+        }
+    }
+}
 int main()
 {
-    primeNumbersInRange(17);
+    // primeNumbersInRange(17);
+    // seiveOfErastosthnes(10);
+    // seiveOfErstothenesOptimized(10);
+    seiveOfEratosthenesOptimized2(25);
     return 0;
 }
