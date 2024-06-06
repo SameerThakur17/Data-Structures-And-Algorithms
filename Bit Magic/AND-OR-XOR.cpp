@@ -3,14 +3,26 @@ using namespace std;
 
 int bitwise_and(int a, int b)
 {
+    /*
+    Time Complexity O(1)
+    Space Complexity O(1)
+    */
     return a & b;
 }
 int bitwise_or(int a, int b)
 {
+    /*
+    Time Complexity O(1)
+    Space Complexity O(1)
+    */
     return a | b;
 }
 int bitwise_xor(int a, int b)
 {
+    /*
+    Time Complexity O(1)
+    Space Complexity O(1)
+    */
     return a ^ b;
 }
 
