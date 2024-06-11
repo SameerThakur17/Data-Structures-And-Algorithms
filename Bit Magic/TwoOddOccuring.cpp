@@ -3,6 +3,10 @@ using namespace std;
 
 void twoOddOccuringNaive(int arr[], int n)
 {
+    /*
+    Time Complexity O(n^2)
+    Space Complexity O(1)
+     */
     for (int i = 0; i < n; i++)
     {
         int count = 0;
