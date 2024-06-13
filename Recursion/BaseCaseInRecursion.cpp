@@ -3,6 +3,10 @@ using namespace std;
 
 int factorial(int n)
 {
+    /*
+    Time Complexity O(n)
+    Space Complexity O(n)
+    */
     if (n == 0)
     {
         return 1;
@@ -11,6 +15,10 @@ int factorial(int n)
 }
 int fibonacci(int n)
 {
+    /*
+    Time Complexity O(2^n)
+    Space Complexity O(n)
+    */
     if (n <= 1)
     {
         return n;
