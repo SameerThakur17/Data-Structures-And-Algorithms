@@ -3,6 +3,10 @@ using namespace std;
 
 int josephusProblem(int n, int k)
 {
+    /*
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    */
     if (n == 1)
     {
         return 0;

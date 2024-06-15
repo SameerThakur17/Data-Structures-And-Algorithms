@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void subsetsOfString(string s, string curr = "", int index = 0)
+void subsetsOfString(string &s, string curr = "", int index = 0)
 {
     /*
     Time Complexity O(2^n)
@@ -19,6 +19,7 @@ void subsetsOfString(string s, string curr = "", int index = 0)
 
 int main()
 {
-    subsetsOfString("ABC");
+    string s = "ABC";
+    subsetsOfString(s);
     return 0;
 }

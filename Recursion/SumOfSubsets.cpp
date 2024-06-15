@@ -3,6 +3,10 @@ using namespace std;
 
 int sumOfSubsets(int arr[], int n, int sum)
 {
+    /*
+    Time Complexity: O(2^n)
+    Space Complexity: O(n)
+    */
     if (n == 0)
     {
         return sum == 0 ? 1 : 0;
