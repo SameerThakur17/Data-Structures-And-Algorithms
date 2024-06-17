@@ -3,6 +3,10 @@ using namespace std;
 
 int ropeCutting(int n, int a, int b, int c)
 {
+    /*
+    Time Complexity O(3^n)
+    Space Complexity O(n)
+    */
     if (n == 0)
         return 0;
 
