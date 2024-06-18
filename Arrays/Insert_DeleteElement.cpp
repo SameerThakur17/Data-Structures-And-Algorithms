@@ -22,6 +22,10 @@ int insert(int arr[], int n, int capacity, int position, int element)
 }
 int remove(int arr[], int n, int element)
 {
+    /*
+    Time Complexity O(n)
+    Space Complexity O(1)
+    */
     int i;
     for (i = 0; i < n; i++)
     {

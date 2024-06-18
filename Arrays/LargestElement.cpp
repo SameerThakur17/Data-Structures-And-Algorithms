@@ -32,7 +32,7 @@ int largestElementIndex(int arr[], int n)
     Space Complexity O(1)
     */
     int largest_index = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         if (arr[i] > arr[largest_index])
         {
@@ -43,8 +43,8 @@ int largestElementIndex(int arr[], int n)
 }
 int main()
 {
-    int brr[4] = {1, 40, 59, 7};
-    cout << largestElementIndex(brr, 4) << endl;
-    cout << largestElementNaive(brr, 4);
+    int brr[5] = {1, 40, 59, 7, 100};
+    cout << largestElementIndex(brr, 5) << endl;
+    cout << largestElementNaive(brr, 5);
     return 0;
 }
