@@ -3,7 +3,11 @@ using namespace std;
 
 void reverseArray(int arr[], int n)
 {
-    for (int i = 0, j = n - 1; i <= j; i++, j--)
+    /*
+    Time Complexity O(n)
+    Space Complexity O(1)
+    */
+    for (int i = 0, j = n - 1; i < j; i++, j--)
     {
         int temp = arr[i];
         arr[i] = arr[j];
@@ -13,14 +17,14 @@ void reverseArray(int arr[], int n)
 
 int main()
 {
-    int arr[4] = {1, 5, 6, 7};
-    for (int i = 0; i < 4; i++)
+    int arr[5] = {1, 51, 81, 16, 17};
+    for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
     }
-    reverseArray(arr, 4);
+    reverseArray(arr, 5);
     cout << endl;
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
     }
