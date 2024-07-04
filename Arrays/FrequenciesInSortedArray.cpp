@@ -20,6 +20,27 @@ void frequencies(int arr[], int n)
         cout << arr[n - 1] << " " << 1 << endl;
     }
 }
+
+void frequenciesInSortedArray(int arr[], int n)
+{
+    if (n == 0)
+    {
+        return;
+    }
+    int freq = 1, i = 0;
+    while (i < n)
+    {
+        while (i < n && arr[i] == arr[i + 1])
+        {
+            freq++;
+            i++;
+        }
+        cout << arr[i] << " " << freq << " " << endl;
+        freq = 1;
+        i++;
+    }
+}
+
 int main()
 
 {
