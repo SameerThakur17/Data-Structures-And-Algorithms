@@ -22,6 +22,10 @@ int maxSumOfSubArrayNaive(int arr[], int n)
 
 int maxSumofSubArrayOptimized(int arr[], int n)
 {
+    /*
+    Time Complexity O(n)
+    Space Complexity O(1)
+    */
     int maxEnding = arr[0];
     int res = arr[0];
 
