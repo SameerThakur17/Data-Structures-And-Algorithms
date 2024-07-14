@@ -55,7 +55,7 @@ int firstOccuranceRecursive(int arr[], int low, int high, int element)
     // * Recursive Solution
     /*
     Time Complexity O(logn)
-    Space Complexity O(1)
+    Space Complexity O(logn)
     */
     if (low > high)
     {
