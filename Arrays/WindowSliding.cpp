@@ -4,7 +4,7 @@ using namespace std;
 int maxSumOfConsecutiveKElementsNaive(int arr[], int n, int k)
 {
     /*
-    Time Complexity O(n*k)
+    Time Complexity O((n-k)*k)
     Space Complexity O(1)
     */
     int maxSum = INT32_MIN;
@@ -70,6 +70,8 @@ bool subArraySumOfSizeK(int arr[], int n, int k, int sum)
     return false;
 }
 
+// *Find a subarray with the given sum.
+//  Naive Approach - Run two loops O(n^2) time complexity
 bool isSubArraySumNaive(int arr[], int n, int sum)
 {
     /*
@@ -90,9 +92,29 @@ bool isSubArraySumNaive(int arr[], int n, int sum)
     }
     return false;
 }
-bool isSubArraySumSlidingWindow()
+
+// *Find a subarray with the given sum where all the array elements are positive.
+bool isSubArraySumSlidingWindow(int arr[], int n, int sum)
 {
     // * Works for only positive array elements
+    int start = 0, currSum = arr[0];
+    for (int end = 1; end <= n; end++)
+    {
+        while (currSum > sum && start < end - 1)
+        {
+            currSum -= arr[start];
+            start++;
+        }
+        if (currSum == sum)
+        {
+            return true;
+        }
+        if (end < n)
+        {
+            currSum += arr[end];
+        }
+    }
+    return (currSum == sum);
 }
 
 int main()
@@ -103,6 +125,7 @@ int main()
     // cout << subArraySumOfSizeK(arr, 6, 3, 44);
 
     int brr[6] = {1, 4, 20, 3, 10, 5};
-    cout << isSubArraySumNaive(brr, 6, 39);
+    // cout << isSubArraySumNaive(brr, 6, 15);
+    cout << isSubArraySumSlidingWindow(brr, 6, 15);
     return 0;
 }
