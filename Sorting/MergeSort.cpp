@@ -49,6 +49,7 @@ void mergeSort(int arr[], int l, int r)
     /*
     Time Complexity O(nlogn)
     Space Complexity O(n)
+    Stable Algorithm
     */
     if (r > l)
     {
