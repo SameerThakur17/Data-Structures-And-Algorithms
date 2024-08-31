@@ -50,6 +50,11 @@ void mergeSort(int arr[], int l, int r)
     Time Complexity O(nlogn)
     Space Complexity O(n)
     Stable Algorithm
+    Divide and Conquer Algorithm
+    Used when stablility is important
+    Its not an in-place algorithm as it uses auxilary arrays merge process
+    In general its outperformed by quick sort
+    It is used in many standard library functions of many programming languages
     */
     if (r > l)
     {
