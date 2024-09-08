@@ -4,8 +4,9 @@ using namespace std;
 // Quick Sort
 /*
     Divide and Conquer Algorithm
-    Average Case O(nlogn) and Worst Case O(n^2)
+    Time Complexity Average Case O(nlogn) and Worst Case O(n^2)
     In Place Algorithm as it does'nt use auixilary arrays
+    Uses recursion so has O(n) space complexity in worst case and O(log n) in best case
     In is not a stable algorithm (if implemeted with lomuto or hoare partition)
     It is cache friendly
     Uses tail recursion ie it can be optimized using loop
