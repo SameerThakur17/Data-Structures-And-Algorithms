@@ -3,6 +3,10 @@ using namespace std;
 
 int chocolateDistribution(int arr[], int n, int m)
 {
+    /*
+    Time Complexity O(nlogn)
+    Space Complexity O(1)
+    */
     if (n < m)
     {
         return -1;
