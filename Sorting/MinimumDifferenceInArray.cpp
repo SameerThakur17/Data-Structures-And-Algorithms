@@ -20,7 +20,7 @@ int minDifferenceNaive(int arr[], int n)
 int minDifferenceOptimized(int arr[], int n)
 {
     /*
-    Time Complexity O(n)
+    Time Complexity O(nlogn)
     Space Complexity O(1)
     */
     int res = INT_MAX;
