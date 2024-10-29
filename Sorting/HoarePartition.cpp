@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int hoarePartition(int arr[], int l, int h)
@@ -23,7 +23,7 @@ int hoarePartition(int arr[], int l, int h)
         {
             j--;
         } while (arr[j] > p);
-        if (i <= j)
+        if (i >= j)
             return j;
         swap(arr[i], arr[j]);
     }
@@ -31,7 +31,7 @@ int hoarePartition(int arr[], int l, int h)
 
 int main()
 {
-    int arr[7] = {5, 13, 6, 9, 12, 11, 8};
+    int arr[7] = {9, 5, 6, 7, 12, 11, 8};
     cout << hoarePartition(arr, 0, 6) << endl;
     for (int i = 0; i < 7; i++)
     {
